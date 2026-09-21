@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0d0c" />
+    <meta name="description" content="Catálogo digital demonstrativo da Roussenq Motos." />
+    <title>Roussenq Motos — Catálogo</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Roussenq Motos — início">
+        <img src="./assets/roussenq-logo.jpg" alt="Roussenq Motos" />
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#home" data-nav="home">Início</a>
+        <a href="#motos" data-nav="motos">Motos</a>
+        <a href="#contato" data-nav="contato">Contato</a>
+      </nav>
+      <a class="header-whatsapp" data-whatsapp="geral" href="#">WhatsApp</a>
+    </header>
+
+    <main id="conteudo" tabindex="-1"></main>
+
+    <footer class="site-footer" id="contato">
+      <div class="footer-brand">
+        <img src="./assets/roussenq-logo.jpg" alt="" />
+        <div><strong>Roussenq Motos</strong><span>Catálogo regional de motocicletas</span></div>
+      </div>
+      <div class="footer-links">
+        <a data-whatsapp="geral" href="#">(48) 98812-1232</a>
+        <a href="https://www.instagram.com/leandro.r.goulart/" target="_blank" rel="noreferrer">@leandro.r.goulart</a>
+        <span>[ENDEREÇO]</span>
+        <span>[HORÁRIO]</span>
+      </div>
+      <div class="footer-bottom">
+        <span>Protótipo comercial — dados de estoque demonstrativos.</span>
+        <a href="#admin">Acessar painel</a>
+      </div>
+    </footer>
+
+    <a class="floating-whatsapp" data-whatsapp="geral" href="#" aria-label="Falar no WhatsApp">WA</a>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

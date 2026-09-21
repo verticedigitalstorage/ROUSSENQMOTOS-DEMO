@@ -1,0 +1,9 @@
+{
+  "name": "roussenq-motos-prototipo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
