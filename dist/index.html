@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b0d0c" />
-    <meta name="description" content="Catálogo digital demonstrativo da Roussenq Motos." />
-    <title>Roussenq Motos — Catálogo</title>
+    <meta name="description" content="Motos selecionadas, atendimento direto e negociação simples com a Roussenq Motos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Roussenq Motos — Motos disponíveis" />
+    <meta property="og:description" content="Encontre sua próxima moto e fale diretamente com a Roussenq." />
+    <meta property="og:image" content="/assets/roussenq-fachada-hero.png" />
+    <title>Roussenq Motos — Motos disponíveis</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -30,20 +35,23 @@
         <img src="./assets/roussenq-logo.jpg" alt="" />
         <div><strong>Roussenq Motos</strong><span>Catálogo regional de motocicletas</span></div>
       </div>
-      <div class="footer-links">
-        <a data-whatsapp="geral" href="#">(48) 98812-1232</a>
-        <a href="https://www.instagram.com/leandro.r.goulart/" target="_blank" rel="noreferrer">@leandro.r.goulart</a>
-        <span>[ENDEREÇO]</span>
-        <span>[HORÁRIO]</span>
-      </div>
+      <div class="footer-links" data-business-links></div>
       <div class="footer-bottom">
-        <span>Protótipo comercial — dados de estoque demonstrativos.</span>
-        <a href="#admin">Acessar painel</a>
+        <span>Encontre sua próxima moto e fale diretamente com a Roussenq.</span>
       </div>
     </footer>
 
-    <a class="floating-whatsapp" data-whatsapp="geral" href="#" aria-label="Falar no WhatsApp">WA</a>
-    <div class="toast" role="status" aria-live="polite"></div>
+    <a class="floating-whatsapp" data-whatsapp="geral" href="#" aria-label="Falar no WhatsApp">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M20.2 11.8a8.2 8.2 0 0 1-12 7.3L4 20l.9-4.1a8.2 8.2 0 1 1 15.3-4.1Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+        <path d="M8.4 7.7c.2-.4.5-.4.8-.4h.4c.2 0 .4.1.5.4l.8 1.8c.1.3.1.5-.1.7l-.6.8c.8 1.6 1.8 2.7 3.5 3.5l.7-.8c.2-.2.5-.3.7-.2l1.9.9c.3.1.4.3.4.6 0 .5-.2 1.4-.8 1.8-.5.4-1.3.7-2.4.4-1.4-.4-3.3-1.2-5.1-3-1.4-1.4-2.4-3.2-2.7-4.5-.2-.9.1-1.5.4-2Z" fill="currentColor"/>
+      </svg>
+    </a>
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <span data-toast-message></span>
+      <button type="button" data-toast-close aria-label="Fechar notificação">×</button>
+    </div>
+    <div id="dialog-root"></div>
     <script src="./app.js" defer></script>
   </body>
 </html>
