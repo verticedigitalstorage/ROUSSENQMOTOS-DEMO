@@ -27,6 +27,7 @@ const DEMO_MOTOS = [
 const main = document.querySelector("main");
 const toast = document.querySelector(".toast");
 const toastMessage = document.querySelector("[data-toast-message]");
+const toastClose = document.querySelector("[data-toast-close]");
 const currentYear = new Date().getFullYear();
 let activeBrand = "Todas";
 let searchTerm = "";
@@ -76,16 +77,22 @@ function slugify(value) {
 function clearToast() {
   clearTimeout(showToast.timer);
   toast.classList.remove("show");
+  toast.setAttribute("aria-hidden", "true");
+  toast.hidden = true;
+  toastClose.tabIndex = -1;
 }
 
 function showToast(message) {
   toastMessage.textContent = message;
+  toast.hidden = false;
+  toast.setAttribute("aria-hidden", "false");
+  toastClose.tabIndex = 0;
   toast.classList.add("show");
   clearTimeout(showToast.timer);
-  showToast.timer = setTimeout(clearToast, 4200);
+  showToast.timer = setTimeout(clearToast, 3800);
 }
 
-document.querySelector("[data-toast-close]").addEventListener("click", clearToast);
+toastClose.addEventListener("click", clearToast);
 
 function whatsappUrl(moto) {
   const phone = String(CONFIG.business.whatsapp || "").replace(/\D/g, "");
